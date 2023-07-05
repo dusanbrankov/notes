@@ -1,0 +1,31 @@
+# Shortcuts defined in ~/.tmux.conf
+
+# Prefix
+Ctrl-a
+
+# Switch panes
+Alt-left       Left
+Alt-right      Right
+Alt-up         Up
+Alt-down       Down
+
+# Switch windows
+Ctrl-Left
+Ctrl-Right
+
+# Split window
+prefix v       Split vertically
+prefix h       Split horizontally
+
+# Open and rename windows
+prefix r      Rename window
+prefix w      New window
+
+# Source config
+prefix s
+
+# Resize panes
+prefix Alt-ArrowKeys
+
+# TODO
+- Saving tmux sessions in a script file 

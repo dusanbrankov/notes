@@ -1,0 +1,23 @@
+whats my ip address:
+hostname -I
+---
+sudo apt update
+sudo apt install samba
+---
+edit smb.conf:
+sudo nano /etc/samba/smb.conf
+
+under [global] paste:
+   hosts allow = 172.21.147.0/24    #subnet mask, 24 = first three blocks of ip
+   hosts deny = 0.0.0.0/0
+
+at the end paste:
+[sambashare]
+    comment = Samba
+    path = /home/dbran
+    read only = yes
+    browsable = yes
+---
+sudo service smbd restart
+sudo ufw allow samba
+sudo smbpasswd -a dbran

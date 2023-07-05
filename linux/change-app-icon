@@ -1,0 +1,5 @@
+sudo nemo
+
+go to /usr/share/applications
+
+modify the icon from there (Right click on icon you want to change -> properties -> click on the icon in upper left of dialog)

@@ -1,0 +1,3 @@
+npm config set init-author-email "example-user@example.com"
+npm config set init-author-name "example_user"
+npm config set init-license "MIT"

@@ -1,0 +1,54 @@
+Semantic section elements:
+
+- main
+- section
+  - major section of a page
+- article
+  - for repeated content which can be used on their own
+- aside
+  - related to main content, but not necessary to understand it
+- nav
+- footer
+
+
+Fill in accessibility tree with ARIA:
+
+<section aria-labelledby="title-name">
+    <h2 id="title-name">Title name</h2>
+    ...
+</section>
+
+
+Primary navigation:
+
+Menu button should also be in the nav because it needs to be interacted with to show the options.
+
+<header>
+    <a href="#main">Skip to main content</a>
+    <nav aria-label="main">
+    <button aria-controls="menu-items">Menu</button>
+    <ul id="menu-items">
+        <li><a href="#main" aria-current="page">Home</a></li>
+        ...
+    </ul>
+</header>
+
+
+Unordered lists:
+
+Screen readers will tell the user how many items are in the list as soon as they enter them.
+
+
+The role of elements:
+
+<div aria-label="Lemon">Some text</div>
+<span aria-label="Strawberry">Some text</span>
+<button aria-label="Apple">Some text</button>
+
+<div> and <span> don't have a role
+
+<button> has a role
+
+Screen readers use roles to determine what content to read out
+
+NVDA reads aria-label for <button> but element content for <div> and <span>

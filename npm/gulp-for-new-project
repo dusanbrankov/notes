@@ -1,0 +1,3 @@
+npm init
+npm i -D gulp gulp-sass gulp-autoprefixer gulp-clean-css browser-sync
+gulp watch

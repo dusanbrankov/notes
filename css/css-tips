@@ -1,0 +1,6 @@
+- ul list-style: none bugfix
+- current page with aria a[aria-current="page"] {...}
+- style scrollbar
+- a.logo with no text line-height: 0;
+- sticky footer
+- link href #0

@@ -1,0 +1,29 @@
+💡️ install:
+npm init
+npm i -D postcss postcss-import postcss-mixins postcss-nested postcss-simple-vars postcss-preset-env cssnano
+
+--------------------------
+
+💡️ configure:
+postcss.config.js
+
+module.exports = {
+  plugins: [
+    require('postcss-import'),
+    require('postcss-mixins'),
+    require('postcss-nested'),
+    require('postcss-simple-vars'),
+    require('postcss-preset-env'),
+    require('cssnano'),
+  ]
+}
+
+--------------------------
+
+💡️ package.json
+
+"scripts": {
+  "postcss": "postcss ./src/pcss/index.pcss --output ./css/index.css --watch"
+}
+
+npm run postcss

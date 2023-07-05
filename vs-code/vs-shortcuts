@@ -1,0 +1,12 @@
+# sidebar
+
+open sidebar              ctrl b
+explorer                  ctrl shift e
+extensions                ctrl shift x
+global search and replace ctrl shift f
+settings                  ctrl ,
+delete line               ctrl shift k
+jump to document section  crtl shift .
+open project              ctrl r
+select whole line         ctrl l
+select all matches        ctrl shift l

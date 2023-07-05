@@ -1,0 +1,7 @@
+#installation
+pip install PyFontConverter
+pip install brotli # neccessary to convert to woff2
+
+# convert all fonts inside fonts/ to woff and woff2
+font-converter ft2wf fonts/
+

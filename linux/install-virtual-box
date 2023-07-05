@@ -1,0 +1,15 @@
+install virtualbox through software manager
+
+update the virtual guest machine:
+sudo apt update && sudo apt dist-upgrade && sudo apt autoremove
+
+install virtual box:
+sudo apt install virtualbox-guest-dkms linux-headers-virtual
+
+enable removable devices:
+sudo adduser $USER vboxusers
+
+restart:
+reboot
+
+open virtual box > settings > usb > add
