@@ -76,7 +76,7 @@ printenv
 
 ---
 
-## 💡️ system related 
+## 💡️ system related
 
 ### Print information about OS and host
 
@@ -127,4 +127,11 @@ sda      8:0    0 223,6G  0 disk
 sdb      8:16   1  28,8G  0 disk
 └─sdb1   8:17   1  28,8G  0 part /media/dusan/KINGSTON
 sr0     11:0    1  1024M  0 rom
+```
+
+### Find and kill process
+
+```bash
+pidof timeshift  # shows process id
+sudo kill 17810
 ```
