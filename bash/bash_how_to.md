@@ -254,7 +254,7 @@ Grouping | Meaning
 `?(...)` | Zero or one occurrences
 `!(...)` | Not these occurrences, but anything else
 
-## Loop x times
+## Loop n times with `seq`
 
 ```bash
 for i in $(seq 10); do
@@ -262,11 +262,29 @@ for i in $(seq 10); do
 done
 ```
 
-Define an increment value:
+Or by using shell's built-in arithmetic:
 
-`$ seq 0.0 0.1 1.0`
+```bash
+for (( f = 1; f <= END; f++)); do
+    printf '%s ' "Number $f"
+done
+```
 
-`$ seq 1 2 10`
+Or even better and faster:
+
+```bash
+n=10
+seq -f 'Number %g' $n
+# seq per default starts at 1
+```
+
+More `seq` features:
+
+`$ seq 0.0 0.1 1.0` returns `0.0 0.1 ... 1.0`
+
+`$ seq 1 2 10` returns `1 2 4 ... 10`
+
+`$ seq -w 10` returns `01 02 ... 10`
 
 ## Case statement
 
