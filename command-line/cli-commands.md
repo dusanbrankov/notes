@@ -135,3 +135,9 @@ sr0     11:0    1  1024M  0 rom
 pidof timeshift  # shows process id
 sudo kill 17810
 ```
+
+# Rename files
+
+```sh
+rename 's/[ _]/-/g' * && rename 'y/A-Z/a-z/' *
+```

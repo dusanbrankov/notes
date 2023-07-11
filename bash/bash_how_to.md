@@ -254,7 +254,29 @@ Grouping | Meaning
 `?(...)` | Zero or one occurrences
 `!(...)` | Not these occurrences, but anything else
 
+Extended globs allow you to solve a number of problems which otherwise require
+a rather surprising amount of ugly hacking. For example:
+
+```bash
+# To remove all the files except ones matching *.jpg:
+rm !(*.jpg)
+# All except *.jpg and *.gif and *.png:
+rm !(*.jpg|*.gif|*.png)
+# To copy all the MP3 songs except one to your device
+cp !(04*).mp3 /mnt
+```
+
+Extended glob patterns can be nested, too.
+
+```bash
+[[ $fruit = @(ba*(na)|a+(p)le) ]] && echo "Nice fruit"
+```
+
+More information about globs: <https://mywiki.wooledge.org/glob>
+
 ## Loop n times with `seq`
+
+**Update:** As stated in [this article](https://mywiki.wooledge.org/BashGuide/Practices#Don.27t_Ever_Do_These), it's not good practice to use `seq` for counting.
 
 ```bash
 for i in $(seq 10); do
@@ -262,7 +284,7 @@ for i in $(seq 10); do
 done
 ```
 
-Or by using shell's built-in arithmetic:
+Or by using shell's built-in arithmetic (better):
 
 ```bash
 for (( f = 1; f <= END; f++)); do
@@ -270,12 +292,26 @@ for (( f = 1; f <= END; f++)); do
 done
 ```
 
-Or even better and faster:
+Also good:
+
+```bash
+for i in {1..10}; do
+    printf '%s\n' "$i"
+done
+```
+
+This uses the external program `seq`, so not ideal:
 
 ```bash
 n=10
 seq -f 'Number %g' $n
 # seq per default starts at 1
+```
+
+Better would be:
+
+```bash
+printf '%d\n' {1..10}
 ```
 
 More `seq` features:
