@@ -112,6 +112,10 @@ git add .
 git push
 ```
 
+## undo last commit
+
+git reset --soft HEAD~1
+
 ## 👉️ undo pushed commits
 
 ```sh
