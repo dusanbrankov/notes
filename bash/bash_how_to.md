@@ -236,44 +236,6 @@ swallow up the rest of your script, treating it as input too, and looking for
 that `EOF`. Be sure there are no extra characters (especially blanks or tabs)
 after the `EOF`.
 
-## Extended pattern matching
-
-```bash
-shopt -s extglob
-
-if [[ "$FN" == *.@(jpg|jpeg) ]]; then
-    do_sonething
-fi
-```
-
-Grouping | Meaning
---- | ---
-`@(...)` | Only one occurrence
-`*(...)` | Zero or more occurrences
-`+(...)` | One or more occurrences
-`?(...)` | Zero or one occurrences
-`!(...)` | Not these occurrences, but anything else
-
-Extended globs allow you to solve a number of problems which otherwise require
-a rather surprising amount of ugly hacking. For example:
-
-```bash
-# To remove all the files except ones matching *.jpg:
-rm !(*.jpg)
-# All except *.jpg and *.gif and *.png:
-rm !(*.jpg|*.gif|*.png)
-# To copy all the MP3 songs except one to your device
-cp !(04*).mp3 /mnt
-```
-
-Extended glob patterns can be nested, too.
-
-```bash
-[[ $fruit = @(ba*(na)|a+(p)le) ]] && echo "Nice fruit"
-```
-
-More information about globs: <https://mywiki.wooledge.org/glob>
-
 ## Loop n times with `seq`
 
 **Update:** As stated in [this article](https://mywiki.wooledge.org/BashGuide/Practices#Don.27t_Ever_Do_These), it's not good practice to use `seq` for counting.
