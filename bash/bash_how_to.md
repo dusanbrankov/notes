@@ -358,3 +358,15 @@ Search for **three to five** 'a' letters:
 ```bash
 $ grep 'a\{3,5\}' file
 ```
+
+## Remove leading zeros from number
+
+```sh
+$ n=0002344325
+$ printf '%d\n' $((10#$n))
+$ 2344325
+```
+
+Source <https://stackoverflow.com/questions/13362497/remove-leading-zeros-from-number>
+
+> There is also `printf "%0d\n"`, but not sure what the `0` does.
