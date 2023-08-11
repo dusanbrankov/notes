@@ -18,6 +18,13 @@ git push -u origin main
 git push
 ```
 
+## 👉️ change git remote origin (ssh)
+
+```sh
+git remote set-url <remote_name> <ssh_remote_url>
+# example: git remote set-url origin git@github.com:dusanbrankov/dotfiles.git
+```
+
 ## 👉️ switch to another exisitng branch or create a new one (same command)
 
 ```sh
