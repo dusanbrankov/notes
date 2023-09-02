@@ -18,10 +18,10 @@ dpkg -l | grep 'linux-image' | awk '{print $2}'
 sudo apt remove --purge KERNEL
 ```
 
-**Update boot config file and reboot:**
+**Update GRUB boot loader configuration and reboot:**
 
 ```sh
-sudo update-grub2
+sudo update-grub2 # or update-grub
 sudo reboot
 ```
 
