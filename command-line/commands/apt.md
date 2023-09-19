@@ -24,8 +24,7 @@ $ apt update`
 $ apt upgrade`
 ```
 
-Download and install the updates AND install new necessary packages
-AND remove packages that stand in the way of the upgrade - use with caution!
+**Download and install the updates AND install new necessary packages AND remove packages that stand in the way of the upgrade - use with caution!**
 
 ```sh
 $ apt dist-upgrade`
