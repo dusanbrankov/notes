@@ -82,10 +82,11 @@ display_errors = On
 sudo systemctl restart apache2
 ```
 
-=====================================================
+---
 
-OLD
+_OLD_
 
+```sh
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
@@ -108,13 +109,16 @@ sudo apt-get install phpmyadmin
 sudo mysql
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'enterpassword';
 mysql -u root -p
+```
 
-----------------
+---
 
-[sources]
+**Sources:**
+
 https://techviewleo.com/how-to-install-lamp-stack-on-linux-mint/
+
 https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
+
 https://phoenixnap.com/kb/access-denied-for-user-root-localhost
 
 https://askubuntu.com/questions/450603/correct-permissions-for-sudo-lamp-var-www-directory
-https://phoenixnap.com/kb/access-denied-for-user-root-localhost
