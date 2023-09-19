@@ -3,37 +3,37 @@
 **Find packages matching `<phrase>`**
 
 ```sh
-$ apt-cache search <phrase>`
+$ apt-cache search <phrase>
 ```
 
 **Show information on `<package>`**
 
 ```sh
-$ apt show <package>`
+$ apt show <package>
 ```
 
 **Fetch package list**
 
 ```sh
-$ apt update`
+$ apt update
 ```
 
 **Download and install the updates and (UNLIKE apt-get) install new necessary packages:**
 
 ```sh
-$ apt upgrade`
+$ apt upgrade
 ```
 
 **Download and install the updates AND install new necessary packages AND remove packages that stand in the way of the upgrade - use with caution!**
 
 ```sh
-$ apt dist-upgrade`
+$ apt dist-upgrade
 ```
 
 **Perform a full system upgrade:**
 
 ```sh
-$ apt update && apt upgrade  # use dist-upgrade carefully if needed`
+$ apt update && apt upgrade  # use dist-upgrade carefully if needed
 ```
 
 **Install package(s):**
