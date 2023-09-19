@@ -109,6 +109,8 @@ git commit --allow-empty-message -m ''
 ```sh
 git add the_left_out_file
 git commit --amend --no-edit
+# to apply changes to the remote repository, run:
+git push --force
 ```
 
 ## 👉️ remove files/directories from .gitignore from repository
