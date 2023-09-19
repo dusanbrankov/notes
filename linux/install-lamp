@@ -1,3 +1,11 @@
+sudo apt update && sudo apt install apache2
+
+install php if not installed:
+sudo apt install php
+
+
+
+
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
@@ -10,6 +18,10 @@ sudo systemctl status apache2
 
 sudo nano /var/www/html/info.php
 add: <?php phpinfo(); ?>
+
+edit php.ini to show error messages (see info.php for config path)
+
+
 
 sudo systemctl restart apache2
 

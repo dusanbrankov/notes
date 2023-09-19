@@ -1,16 +1,20 @@
 # Move home directory to new partition
 
-First let's list the filesystem usage:
+**1. List the filesystem usage**
 
-`df -hl`
+```sh
+df -hl
+```
 
-To unmount _/home_, create first a temporary directory and then change the home
-directory manually in the _/etc/passwd_ file.
+**2. Unmount /home**
+
+To unmount _/home_, first create a temporary directory and then change the
+home directory manually in the _/etc/passwd_ file.
 
 > Note: _sdaX_ needs to be replaced with the actual device name.
 Run `sudo fdisk -l` to list all block devices.
 
-```bash
+```sh
 # temporary home dir
 sudo mkdir /house
 sudo chown USER:USER /house
@@ -22,12 +26,12 @@ sudo vim /etc/passwd
 reboot
 ```
 
-After system reboot, unmount _/home_ and _/house_, and then mount new partition
-to _/home_.
+After system reboot, unmount _/home_ and _/house_, and then mount the new
+partition to _/home_.
 
-Example device: **sdcX**
+(Example device: **sdcX**)
 
-```bash
+```sh
 sudo umount /home  # or sudo umount /dev/sdbX
 sudo umount /house
 sudo mount /dev/sdcX
