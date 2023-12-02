@@ -3,11 +3,11 @@
 **Print information about OS and host**
 
 ```sh
-$ cat /etc/issue`
+$ cat /etc/issue
 ```
 
 ```sh
-$ hostnamectl`
+$ hostnamectl
 ```
 
 ## OS, hardware vendor/model and more
