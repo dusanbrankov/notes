@@ -1,14 +1,16 @@
-## System related commands
+# System related commands
 
 **Print information about OS and host**
 
 ```sh
 $ cat /etc/issue`
+```
 
 ```sh
 $ hostnamectl`
+```
 
-### OS, hardware vendor/model and more
+## OS, hardware vendor/model and more
 
 ```sh
 $ hostnamectl
