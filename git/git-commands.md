@@ -1,6 +1,6 @@
 # Git commands
 
-## 👉️ create git project
+##  create git project
 
 ```sh
 git init
@@ -9,7 +9,7 @@ git status
 git commit -m "Initial commit"
 ```
 
-## 👉️ git remote
+##  git remote
 
 ```sh
 git branch -M main
@@ -18,27 +18,27 @@ git push -u origin main
 git push
 ```
 
-## 👉️ change git remote origin (ssh)
+##  change git remote origin (ssh)
 
 ```sh
 git remote set-url <remote_name> <ssh_remote_url>
 # example: git remote set-url origin git@github.com:dusanbrankov/dotfiles.git
 ```
 
-## 👉️ switch to another exisitng branch or create a new one (same command)
+##  switch to another exisitng branch or create a new one (same command)
 
 ```sh
 git checkout <branch>
 ```
 
-## 👉️ check if local branch is behind remote branch
+##  check if local branch is behind remote branch
 
 ```sh
 git fetch
 git status
 ```
 
-## 👉️ update local branch with commits from remote branch
+##  update local branch with commits from remote branch
 
 ```sh
 git pull --rebase && git push
@@ -49,7 +49,7 @@ coming from the remote, avoiding a merge commit.
 
 Or run `git fetch` first if you expect conflicts, then run `git merge`.
 
-## 👉️ create new branch
+##  create new branch
 
 **1. create new branch**
 
@@ -84,7 +84,7 @@ git branch -d <branch-name>
 git push origin --delete <branch-name>
 ```
 
-## 👉️ change last commit message (this also changes the hash/id of the commit)
+##  change last commit message (this also changes the hash/id of the commit)
 
 ```sh
 git commit --amend -m "commit msg"
@@ -92,19 +92,19 @@ git commit --amend -m "commit msg"
 
 Don't use when already pushed to remote branch.
 
-## 👉️ add only modified and deleted files
+##  add only modified and deleted files
 
 ```sh
 git add -u # optional: <path/to/folder>
 ```
 
-## 👉️ commit with no message
+##  commit with no message
 
 ```sh
 git commit --allow-empty-message -m ''
 ```
 
-## 👉️ add file to last commit
+##  add file to last commit
 
 ```sh
 git add the_left_out_file
@@ -113,7 +113,7 @@ git commit --amend --no-edit
 git push --force
 ```
 
-## 👉️ remove files/directories from .gitignore from repository
+##  remove files/directories from .gitignore from repository
 
 ```sh
 git rm -rf --cached <file>
@@ -121,11 +121,17 @@ git add .
 git push
 ```
 
+If you want to ignore a file that is already checked in, you must untrack the file before you add a rule to ignore it. From your terminal, untrack the file.
+
+```sh
+git rm --cached FILENAME
+```
+
 ## undo last commit
 
 git reset --soft HEAD~1
 
-## 👉️ undo pushed commits
+##  undo pushed commits
 
 ```sh
 git log # to get/choose ommit-hash
@@ -133,20 +139,20 @@ git reset --hard <commit-hash>
 git push -f
 ```
 
-## 👉️ move commit to another branch
+##  move commit to another branch
 
 ```sh
 git checkout <branch>
 git cherry-pick <commit-hash>
 ```
 
-## 👉️ remove untracked [f]iles/[d]irectories in working directory
+##  remove untracked [f]iles/[d]irectories in working directory
 
 ```sh
 git clean -fd
 ```
 
-## 👉️ using git worktree to deploy github pages
+##  using git worktree to deploy github pages
 
 ```sh
 git checkout --orphan gh-pages
@@ -161,4 +167,24 @@ git add --all
 git commit -m "deploy updates"
 git push origin gh-pages
 git worktree remove dist/
+```
+
+## look at an old commit without modifying the current branch
+
+go back one commit:
+
+```
+git checkout HEAD^
+```
+
+**go back n commits:**
+
+```
+git checkout HEAD~n
+```
+
+**or select commit by its hash:**
+
+```
+git checkout <hash>
 ```
