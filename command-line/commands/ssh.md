@@ -1,6 +1,13 @@
 # SSH
 
-### Usage
+### How to
+
+1. [Login to a remote system](#login)
+2. [Copy files](#copy)
+
+-----
+
+<a name="login" />
 
 #### Login to a remote system:
 
@@ -22,6 +29,8 @@ Login to a server
 ```sh
 ssh admin@example.com
 ```
+
+<a name="copy" />
 
 #### Copy files
 
