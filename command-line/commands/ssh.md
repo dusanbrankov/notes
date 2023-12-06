@@ -1,15 +1,13 @@
-# SSH
+# ssh
 
-### How to
+### Usage
 
 1. [Login to a remote system](#login)
 2. [Copy files](#copy)
 
------
+<a id="login"></a>
 
-<a name="login" />
-
-#### Login to a remote system:
+Login to a remote system:
 
 ```sh
 ssh USERNAME@IP_ADDRESS
@@ -23,7 +21,6 @@ Login to a local computer
 ssh john@192.168.24.107
 ```
 
-
 Login to a server
 
 ```sh
@@ -33,12 +30,6 @@ ssh admin@example.com
 <a name="copy" />
 
 #### Copy files
-
-```sh
-scp SOURCE DEST  # same as cp
-```
-
-### Options
 
 ```sh
 scp command:
